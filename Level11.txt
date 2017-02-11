@@ -1,0 +1,25 @@
+[ İstenilen ]
+
+Level10 -> Level 11
+
+Bir sonraki seviye için parola base64 ile kodlanmış verileri içeren data.txt
+dosyasında saklanmaktadır.
+
+Seviyeyi çözmenize yardımcı olucak komutlar :
+grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+
+[ Çözüm ]
+
+base64	: Base64, PHP programlama dili içerisinde 8 bitlik verileri 64 bite 
+çevirmek amacıyla kullanılan bir kodlama tekniğidir. 8 bit değerine sahip olan
+veriler ile 64 bitlik veriler arasında farklı katmanlı iletişimlerin meydana 
+gelmemesi için bu basit kodlama tekniği kullanılır.
+
+Step0	: ls
+Output	: data.txt
+
+Step1	: cat data.txt
+Output	: VGhlIHBhc3N3b3JkIGlzIElGdWt3S0dzRlc4TU9xM0lSRnFyeEUxaHhUTkViVVBSCg==
+
+Step2	: base64 -d data.txt 
+Output	: The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR

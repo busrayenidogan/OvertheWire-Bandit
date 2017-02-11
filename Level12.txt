@@ -1,0 +1,17 @@
+[ İstenilen ]
+
+Level11 -> Level12
+
+Bir sonraki seviyenin parolasi data.txt tüm harflerin 13 konum 
+kaydırılmasından oluşucaktır.
+
+Seviyeyi çözmenize yardımcı olucak komutlar :
+grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+
+[ Çözüm ]
+
+Step0	: ls
+Output	: data.txt
+
+Step1	: tr '[A-Za-z]' '[N-ZA-Mn-za-m]' < data.txt
+Output	: The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
