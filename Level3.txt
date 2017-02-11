@@ -3,7 +3,7 @@
 Level2 -> Level3
 
 Bir sonraki seviye için /home dizini içinde bulunan spaces in this filename
-içerisinde şifre saklanmaktadır.
+içerisinde parola saklanmaktadır.
 
 Seviyeyi çözmenize yardımcı olucak komutlar : ls, cd, cat, file, du, find
 
