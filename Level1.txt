@@ -1,0 +1,40 @@
+[ İstenilen ]
+
+Level0 -> Level1
+
+Bir sonraki seviye için olan şifre home dizinindeki readme adli dosyada saklan
+maktadır.Bulduğunuz şifreyle SSH kullanarak bandit1'e giriş yapmak için 
+kullanın.Bir seviyede bulduğunuz şifre diğer seviyeye sshla giriş yapmak için 
+kullanın.
+
+Seviyeyi çözmenize yardımcı olucak komutlar : ls,cd,cat,file,du,find
+
+[ Çözüm ]
+
+ls	: O an da bulunulan dizinin içeriğini listeler.
+cd	: Dizin değiştirir.
+cat	: Dosya içeriğini gösterir.
+file	: Dosya hakkında bilgiverir.
+du	: Bir dosyanin ya da dizinin bellekte ne kadar yer kapladıgını gösterir.
+find	: Herhangi bir dosyayi arar.
+
+Şimdi tüm bu komutları kullanmak adına :
+
+Step0	: cd komutu ile en üst dizine /home a çıkıyoruz.
+
+Step1	: find komutu ile dizin içeriğinde bulunan readme dosyası gördük
+
+Step2	: ls komutu ilede tekrar teyit ediyoruz.
+
+Step3	: file komutu ile dosya hakkında bilgi aliyoruz 
+Output	: readme: ASCII text   
+
+Step4	: du komutu ile dosya boyutunu öğreniyoruz.
+Output	: 4	readme
+
+Step5	: cat ile de dosya içeriğini okuduk.
+Output	: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+Ve son adımda yani step5 de şifremizi bulduk.Bu şifeyi bandit1 geçmek için
+kullanıcaz.	
+ 

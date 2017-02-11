@@ -1,0 +1,25 @@
+[ İstenilen ]
+
+Level0 
+
+Bu seviyenin amacı oyuna SSH kullanarak giriş yapabilmektir.Ana bilgisayar
+bandit.labs.overthewire.org'dır.
+Kullanıcı adınız : bandit0
+Kullanıcı parolanız : bandit0 
+
+Seviyeyi çözmenize yardımcı olucak komutlar : ssh
+
+[ Çözüm ] 
+
+Linuxta SSH genel kullanımı : ssh KullanıcıAdı@Adres 
+
+Step0:Terminali açın ve şu komudu girin : ssh badit0@bandit.labs.overthewire.org
+
+Step1:Are you sure you want to continue connecting (yes/no)? 
+görüceksiniz yani bağlantıya devam etmek istiyormusunuz yes yazın.
+
+Step2:bandit0@bandit.labs.overthewire.org's password: parolayi girmenizi 
+istiyor bandit0 yazin 
+
+Ve artik bandit.labs.overthewire.org dasiniz.
+

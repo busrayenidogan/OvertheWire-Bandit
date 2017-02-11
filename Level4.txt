@@ -1,0 +1,21 @@
+[ İstenilen ]
+
+Level3 -> Level4
+
+Bir sonraki seviyenin şifresi inhere dizinindeki gizli bir dosyada saklıdır.
+
+Seviyeyi çözmenize yardımcı olucak komutlar : ls, cd, cat, file, du, find
+
+[ Çözüm ]
+
+Step0	: cd /inhere komutu ile inhere dosyasının içine giriyoruz.
+
+Step1	: ls komutu ile dosya içeriğini baktığımızda birşey göremiyoruz.
+Bizden istenilen bölümünde dosyanın gizli olduğu söylenmişti.man ls komutu
+ile gizli dosyaları listememizi sağlayan ls komutunun -a parametresini 
+öğreniyoruz.
+
+ls -a
+Output	: pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+
+

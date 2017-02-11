@@ -1,0 +1,18 @@
+[ İstenilen ]
+
+Level2 -> Level3
+
+Bir sonraki seviye için /home dizini içinde bulunan spaces in this filename
+içerisinde şifre saklanmaktadır.
+
+Seviyeyi çözmenize yardımcı olucak komutlar : ls, cd, cat, file, du, find
+
+[ Çözüm ]
+
+Step0	: 
+cat spaces\ in\ this\ filename
+Output  : UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+yada
+cat "spaces in this filename" 
+Output  : UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+

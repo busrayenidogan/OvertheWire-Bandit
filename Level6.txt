@@ -1,0 +1,46 @@
+[ İstenilen ]
+
+Level5 -> Level6
+
+Bir sonraki seviyeye ait parola, /inhere dizinin altında bir yerde saklanır ve
+aşağıdaki özelliklere sahiptir.
+
+- human-readable yani anlaşılır çıktı
+- boyutu 1033 bayt
+- not executable yani çalıştırılabilir dosya formatina sahip değildir.
+
+Seviyeyi çözmenize yardımcı olucak komutlar : ls, cd, cat, file, du, find
+
+[ Çözüm ]
+
+Step0	: cd /inhere
+
+Step1	: ls yazdığımızda 20 tane klasör ile karşılaşırız.Klasörün bir tane
+sinin içinde istediğimiz şartlarda dosya bulunmaktadır.
+
+Step2	: cd maybehere07/ 
+
+Step3	: du -b | ls -al 
+Output : 
+total 56
+-rwxr-x---  1 root bandit5 3663 Nov 14  2014 -file1
+-rw-r-----  1 root bandit5 2488 Nov 14  2014 -file2
+-rwxr-x---  1 root bandit5 3362 Nov 14  2014 -file3
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 .
+drwxr-x--- 22 root bandit5 4096 Nov 14  2014 ..
+-rwxr-x---  1 root bandit5 3065 Nov 14  2014 .file1
+-rw-r-----  1 root bandit5 1033 Nov 14  2014 .file2
+-rwxr-x---  1 root bandit5 1997 Nov 14  2014 .file3
+-rwxr-x---  1 root bandit5 4130 Nov 14  2014 spaces file1
+-rw-r-----  1 root bandit5 9064 Nov 14  2014 spaces file2
+-rwxr-x---  1 root bandit5 1022 Nov 14  2014 spaces file3
+
+Aradığımız dosya .file2 dir.
+
+Step4	: file .file yazdığımızda özel tanımlı olmadığını anlarız.
+
+Step5	: cat < .file2 ile dosyayı açarız. 
+Output : "DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        " 
+Çıktıda boşluk karakterleri olduğu için karıştırılmaması adına tırnak
+işaretilerinin arasına yazdım.                                                           

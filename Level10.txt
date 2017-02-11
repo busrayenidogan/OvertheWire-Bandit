@@ -1,0 +1,23 @@
+[ İstenilen ]
+
+Level9 -> Level10
+
+Bir sonraki seviyeye ait parola data.txt dosyasının içinde  birkaç tane '=' 
+karakterlerden ve insan tarafından okunabilen karakterlerden oluşuyor.
+
+Seviyeyi çözmenize yardımcı olucak komutlar :
+grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+
+[ Çözüm ]
+
+Step0	: ls
+Output	: data.txt
+
+Step1	: strings data.txt | grep  == 
+Output	: 
+I========== the6
+========== password
+========== ism
+========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+
+Parolanın son satır oluduğu anlaşılıyor.

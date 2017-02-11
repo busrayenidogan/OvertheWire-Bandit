@@ -1,0 +1,32 @@
+[ İstenilen ]
+
+Level7 -> Level8
+
+Bir sonraki seviyenin parolası data.txt dosyasının milyonuncu kelimesinin 
+yanında bulunmaktadır.
+
+Seviyeyi çözmenize yardımcı olucak komutlar : 
+grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd
+
+[ Çözüm ]
+
+grep	: İstenilen kelimeyi arar.
+sort	: Siralayarak gösterir.
+uniq	: Siralanmış dosyadaki aynı satirlari ele
+strings : Yazdırılabilir karakter dizisini döndürür.Temel kullanımı ikili dosya
+larınn içeriğini belirlemek ve metin ayıklamaktır.
+base64  : Base64, PHP programlama dili içerisinde 8 bitlik verileri 64 bite 
+çevirmek amacıyla kullanılan bir kodlama tekniğidir.
+tr	: Tekrarlanan karakterleri çevirmek, silmek veya sıkıştırmak için kullanı
+lan UNIX komutudur.stdin'den okuyup stdout'a yazacaktır.
+tar	: Dosya sıkıştırma komutu
+gzip	: Dosya sıkıştırma komutu
+bzip2	: Dosya sıkıştırma komutu
+xxd	: Bir dosyanin veya standart girdinin bir hex dökümünü oluşturur. 
+
+Step0	: ls
+Output  : data.txt
+
+Step1	: grep millionth data.txt
+Output	: millionth	cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+

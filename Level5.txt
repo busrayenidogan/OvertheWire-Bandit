@@ -1,0 +1,38 @@
+[ İstenilen ]
+
+Level4 -> Level5
+
+Bir sonraki seviyenin şifresi /inhere dizininde sadece insanların anlayabile
+ceği şekilde bulunmaktadır.
+
+İpucu: Terminaliz bozulduysa "reset" komutunu deneyin.
+
+Seviyeyi çözmenize yardımcı olucak komutlar : ls, cd, cat, file, du, find
+
+[ Çözüm ]
+
+Step0	: cd /inhere
+
+Step1	: ls -a
+
+Step2	: file -file00
+Output:file: Cannot open `ile00' (No such file or directory).
+Burdan daha önceki örneklerde gördüğümüz gibi özel tanımlı bir dosya olmadığı
+nı anlıyoruz.
+
+Step3	: cat -file00 yazıyoruz 
+Output	: cat: invalid option -- 'f'
+Try 'cat --help' for more information.
+
+Böyle bir çıktı alıyoruz demekki sadece cat ile açamıyoruz dosyayı zaten bunu
+file komutu ilede anlamıştık.
+
+Step4: cat < -file00 veya cat ./-file00 yazarak dosya içeriğini açabiliyoruz.
+Dizin içerisinde 10 tane dosya bulunmaktadir.Bunlardan sadece bir tanesi anla
+şılabilir dosyadır.Sırayla hepsini deniyoruz.
+
+cat < -file07
+Output	: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+-file07 de anlaşılır bir çıktı elde ediyoruz. 
+

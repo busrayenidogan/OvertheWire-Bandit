@@ -1,0 +1,29 @@
+[ İstenilen ]
+
+Level1 -> Level2
+
+Bir sonraki seviye için /home dizinende - adında bir dosya bulunmaktadır.
+
+Seviyeyi çözmenize yardımcı olucak komutlar : ls, cd, cat, file, du, find
+
+[ Çözüm ]
+
+Bir önceki level'da bize bu seviyede yardımcı olucak komutları ayrıntılı
+bir şekilde gördüğümüz için bundan sonraki levellarda ayrıntıya girmeyeceğim.
+
+Step0	: ls komutu ile - dosyasını bulduk.
+
+Step1	: cat ile açmaya çalıştığımızda dosya içeriğini açamadığımızı 
+görüceksiniz.Sebebi ise dosyanin özel bir dosya adı olarak tanımlanmamasından
+kaynaklanmaktadır. 
+cat < - yazarsanız : 
+Output	: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+cat ./-
+Output  : CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9 çıktısını alırsınız.
+
+- dosyasının içeriği < yönlendirme işareti ile gösterdik. 
+
+./ ile de dosyaya yol belirttik. 2. kullanımı ayrıntılı anlamak için 
+http://unix.stackexchange.com/questions/16357/usage-of-dash-in-place-of-a-filename
+burayı okuyabilirsiniz.
+
