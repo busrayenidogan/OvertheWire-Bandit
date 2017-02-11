@@ -2,7 +2,7 @@
 
 Level3 -> Level4
 
-Bir sonraki seviyenin şifresi inhere dizinindeki gizli bir dosyada saklıdır.
+Bir sonraki seviyenin parolası inhere dizinindeki gizli bir dosyada saklıdır.
 
 Seviyeyi çözmenize yardımcı olucak komutlar : ls, cd, cat, file, du, find
 
