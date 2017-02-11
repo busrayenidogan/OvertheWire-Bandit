@@ -4,7 +4,7 @@ Level0 -> Level1
 
 Bir sonraki seviye için olan parola /home dizinindeki readme adli dosyada saklan
 maktadır.Bulduğunuz parolayla SSH kullanarak bandit1'e giriş yapmak için 
-kullanın.Bir seviyede bulduğunuz şifre diğer seviyeye sshla giriş yapmak için 
+kullanın.Bir seviyede bulduğunuz parola diğer seviyeye sshla giriş yapmak için 
 kullanın.
 
 Seviyeyi çözmenize yardımcı olucak komutlar : ls,cd,cat,file,du,find
@@ -35,6 +35,6 @@ Output	: 4	readme
 Step5	: cat ile de dosya içeriğini okuduk.
 Output	: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 
-Ve son adımda yani step5 de şifremizi bulduk.Bu şifeyi bandit1 geçmek için
+Ve son adımda yani step5 de parolamızı bulduk.Bu parolayı bandit1 geçmek için
 kullanıcaz.	
  
