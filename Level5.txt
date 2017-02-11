@@ -2,7 +2,7 @@
 
 Level4 -> Level5
 
-Bir sonraki seviyenin şifresi /inhere dizininde sadece insanların anlayabile
+Bir sonraki seviyenin parolası /inhere dizininde sadece insanların anlayabile
 ceği şekilde bulunmaktadır.
 
 İpucu: Terminaliz bozulduysa "reset" komutunu deneyin.
