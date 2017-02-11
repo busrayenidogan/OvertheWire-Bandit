@@ -11,7 +11,7 @@ Seviyeyi çözmenize yardımcı olucak komutlar : ssh
 
 [ Çözüm ] 
 
-Linuxta SSH genel kullanımı : ssh KullanıcıAdı@Adres 
+Linuxta SSH genel kullanımı : ssh KullanıcıAdı@Sunucu 
 
 Step0:Terminali açın ve şu komudu girin : ssh badit0@bandit.labs.overthewire.org
 
