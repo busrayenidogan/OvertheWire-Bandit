@@ -1,0 +1,16 @@
+[ İstenilen ]
+
+Level15 -> Level16
+
+Bir sonraki seviyenin parolasi, SSL şifrelemesi kullanılarak yerel seviyedeki
+parolayı yerel ağdaki 3001 numaralı bağlantı noktasına göndererek alabilir-
+siniz.
+
+Seviyeyi çözmenize yardımcı olucak komutlar :
+ssh, telnet, nc, openssl, s_client, nmap
+
+[ Çözüm ]
+
+Step0	: openssl s_client -connect 127.0.0.1:30001 -ign_eof
+Ouput	: cluFn7wTiGryunymYOu4RcffSxQluehd
+

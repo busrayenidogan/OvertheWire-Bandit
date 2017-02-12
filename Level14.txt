@@ -1,0 +1,52 @@
+[ İstenilen ]
+
+Level13 -> Level14
+
+Bir sonraki seviyenin parolasi /etc/bandit_pass/bandit14 de saklanmaktadır.
+Ve bu dosyaya sadece bandit14 kullanıcısı erişebilir.Bu seviye için önce bir
+sonraki seviyenin şifresini almalısınız.Ancak öncelikle sonraki seviyeye 
+girmek için kullanılacak olan özel SSH anahtarını almalısınız.
+
+Seviyeyi çözmenize yardımcı olucak komutlar :
+ssh, telnet, nc, openssl, s_client, nmap
+
+[ Çözüm ]
+
+ssh	: Uzak sunucu bağlantı protokolüdür.
+
+telnet	: Uzak sunucu bağlantı protokolüdür.
+
+nc	: Ağı okuyan ve TCP veya UDP iletişim kurallarını kullanarak ağ bağlantı
+larını yazan bir hizmettir.
+
+openssl	: SSL ve TLS protokollerinin açık kaynak kodlu uygulamasıdır. C programlama 
+dili ile yazılmış ana kütüphane temel kriptografik fonksiyonları uygular.
+
+s_client:Eğer bir bilgisayardan internete bağlanılarak web siteleri ziyaret ediliyorsa o bilgisayar istemci (Client) bilgisayardır. Yani İstemci bilgisayarlar sunucu bilgisayarlara bağlanarak onlardan bilgi alırlar.
+
+nmap	: Güvenli tarayıcısıdır.
+
+
+Step0	: ls
+Output	: sshkey.private
+
+Step1	: cat sshkey.private
+
+Step2	: Bu private key bir sonraki seviyeye giriş yapmamızı ve bandit14 daki 
+parolayı alabilmemize olanak sağlıycak.Öncelikle bu sshkey.private dosya 
+içeriğini kopyalayın ve kendi makinanizdaki sshkey.txt dosyayasına yapıştırın.
+
+Step3	: chmod 600 sshkey.txt
+
+Step4	: ssh -i sshkey.txt bandit14@bandit14.labs.overthewire.org
+
+Step5	:  cd /etc/bandit_pass/
+Output	:
+bandit0   bandit12  bandit16  bandit2   bandit23  bandit3  bandit7
+bandit1   bandit13  bandit17  bandit20  bandit24  bandit4  bandit8
+bandit10  bandit14  bandit18  bandit21  bandit25  bandit5  bandit9
+bandit11  bandit15  bandit19  bandit22  bandit26  bandit6
+
+Step6	: cat bandit14
+Output	: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+

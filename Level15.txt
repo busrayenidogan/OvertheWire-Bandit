@@ -1,0 +1,20 @@
+[ İstenilen ]
+
+Level14 -> Level15
+
+Bir sonraki seviyeye ait parola, geçerli seviyenin şifresini localhost üzerin
+deki 30000 numaralı porta göndererek alınabilir.
+
+Seviyeyi çözmenize yardımcı olucak komutlar :
+ssh, telnet, nc, openssl, s_client, nmap
+
+[ Çözüm ]
+
+Step0	: nc 127.0.0.1 30000 14.seviyenin şifresini girmenizi istiycek
+Output	:
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+Correct!
+BfMYroe26WYalil77FoDi9qh59eK5xNr
+
+
+

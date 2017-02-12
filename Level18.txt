@@ -1,0 +1,27 @@
+[ İstenilen ]
+
+Level17 -> Level18
+
+/home dizininde 2 adet dosya bulunmaktadır: passwords.old ve passwords.new.
+Bir sonraki seviye için olan parola passwords.new dır. İkisi arasındaki fark
+sadece bir satır değiştirilmiştir.
+
+NOT: Eğer bu seviyeyi çözdüysen ve bandit18'e giriş yapmaya çalışırken 
+'Byebye!' görürseniz, bir sonraki seviyeyle ilişkilir bandit19.
+
+Seviyeyi çözmenize yardımcı olucak komutlar :
+cat, grep, ls, diff
+
+[ Çözüm ]
+
+diff	: İki dosya arasindaki farklari gösterir.
+
+Step0	: diff passwords.old passwords.new
+Output	:
+42c42
+< BS8bqB1kqkinKJjuxL6k072Qq9NRwQpR
+---
+> kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+
+- Parolanın passwords.new de olduğunu biliyoruz ve ikinci satır olduğunu 
+anlıyoruz parolanın.
