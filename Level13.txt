@@ -1,5 +1,7 @@
 [ İstenilen ]
 
+Level12 -> Level13
+
 Bir sonraki seviyenin parolasi, ard arda sıkıştırılmış bir dosyanın hexdumpli
 hali data.txt dosyasinda saklanmaktadir.Bu seviye için öncelikle :
 
