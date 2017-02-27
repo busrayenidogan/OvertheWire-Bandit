@@ -1,0 +1,61 @@
+[ İstenilen ]
+
+Bir sonraki seviyenin parolasi, homedirectoryde ki setuid binary dosyasını kullanmalısınız.
+Nasıl kullanılacağini bulmak için argüman kullanmayınız. Bu seviyedeki parola, setuid binary
+dosyasını kullandıktan sonra /etc/bandit_pass'da bulabilirsiniz.
+
+[ Çözüm]
+
+setuid ve getuid konusunu anlamanız için bu iki makaleyi okuyabilirsiniz :
+
+- https://www.syslogs.org/suid-ve-sgid-bitler-ve-bu-bitlere-sahip-dosyalarin-bulunmasi/
+- http://liste.linux.org.tr/arsivler_2002-2004/linux-sohbet/2004/Jun/0076.html
+- http://www.linuxnix.com/suid-set-suid-linuxunix/
+
+Kendi anlatımımla kısaca söz edicek olursam ;
+
+setuid ve getuid bir programı çalıştırmak istediğinizde o anda bulunduğunuz haktan daha 
+fazla hakkı kullanmak istediğiniz zaman kullanıyorsunuz.Yani dosya yetkinizi yükseltmiş
+oluyorsunuz. Linkte verilen aynı örneği vericek olursam :
+
+-rwsr-xr-x 1 root root 15244 2001-11-19 00:29 /bin/ping 
+
+Kullanıcının ve Grubun root izin haklarına sahip olması gerekir.Burdaki sayıların anlamı :
+
+1 = Sticky 
+2 = Setgid
+4 = Setuid
+5 = Setuid +Sticky 
+6 = Setuid + Setgid 
+
+Bu sorunun nasıl çözüleceğini bilmediğimden soruyu çözemediğimi belirtmem gerekir.
+
+Step0	: ls 
+Output	: bandit20-do
+
+Step1	: ls -l
+Output	:
+total 8
+-rwsr-x--- 1 bandit20 bandit19 7370 Nov 14  2014 bandit20-do
+
+Step2	: ./bandit20-do --help
+Output	:
+Usage: env [OPTION]... [-] [NAME=VALUE]... [COMMAND [ARG]...]
+Set each NAME to VALUE in the environment and run COMMAND.
+
+-i, --ignore-environment start with an empty environment
+-0, --null end each output line with 0 byte rather than newline
+-u, --unset=NAME remove variable from the environment
+--help display this help and exit
+--version output version information and exit
+
+A mere - implies -i. If no COMMAND, print the resulting environment.
+
+Report env bugs to bug-coreutils@gnu.org
+GNU coreutils home page: 
+General help using GNU software: 
+Report env translation bugs to 
+For complete documentation, run: info coreutils 'env invocation'
+
+Step3	: /bandit20-do cat /etc/bandit_pass/bandit20
+Output  : GbKksEFF4yrVs6il55v6gwY5aVje5f0j

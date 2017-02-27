@@ -1,0 +1,48 @@
+[ İstenilen ]
+
+Level20 -> Level21
+
+Homedirectory'de aşağıdakileri yapan bir setuid ikili dosyası varıdr .
+
+- Localhost ile bağlantı kurar
+- Bağlantıdan bir metin dizisi okur ve onu bir önceki seviyedeki parola ile
+karşılaştırır.(Bandit20)
+- Eğer şifre doğru ise bir sonraki seviyeye(Bandit21) ait parolayı gönderir.
+
+Not1	: Bu seviyeyi geçebilmeniz için, ikiz kez oturum açmanız gerekir: 
+setuid, komutunu çalıştırmak için bir kez ve setuid'in bağlanacağı bir ağ 
+daemonunu başlatmak için bir kez.
+
+Not2	: Düşündüğünüz gibi çalışıp çalışmadığını görmek için kendi ağ 
+daemonunuza bağlanmayı deneyin 
+
+Seviyeyi çözmenize yardımcı olucak komutlar : ssh, nc, cat
+
+[ Çözüm ]
+
+
+Step0	: ls
+Output	: suconnect
+
+Step1	: ./suconnect
+Output	:
+Usage: ./suconnect <portnumber>
+This program will connect to the given port on localhost using TCP. 
+If it receives the correct password from the other side, the next password is 
+transmitted back.
+
+Step2	: nc -l 1200 < /etc/bandit_pass/bandit20 komutunu giriyoruz ve başka 
+bir sekme ilede :
+
+Step3	: ./suconnect 1200 giriyoruz.
+Output	:
+Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+Password matches, sending next password
+
+Daha sonra :
+
+Step2   : nc -l 1200 < /etc/bandit_pass/bandit20
+Output	: gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+
+
+

@@ -1,0 +1,31 @@
+[ İstenilen ]
+
+Level25 -> Level26
+
+Bandit26 /bin/bash kabuğuna sahip değildir.Başka bir şey olduğu için ne olduğunu
+anlamaya çalışın.
+
+
+[ Çözüm ]
+
+Step0	: ls -l
+Output	: bandit26.sshkey
+
+Step1	: grep bandit26 /etc/passwd
+Output	: bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext  
+
+Step2	: cat /usr/bin/showtext
+Output	: 
+#!/bin/sh
+
+more ~/text.txt  
+exit 0  
+
+Step3	: ssh -i bandit26.sshkey -t bandit26@localhost cat text.txt
+
+Step4	: Now that you have forces the terminal to prompt you to continue the
+display via “more” or “–More–(50%)” in this case, press “v” to enter “vim”, a 
+built-in text editor on Unix machines. You will see the output as per below,
+Now, press “:e /etc/bandit_pass/bandit26” to edit the password file of bandit26.
+
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
